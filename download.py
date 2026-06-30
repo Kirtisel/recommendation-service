@@ -46,6 +46,8 @@ url_reservation = None
 url_folio = None
 program_path = None
 session = None
+host = None
+port = None
 
 
 
@@ -57,7 +59,7 @@ config_path = BASE_DIR / "config.yaml" # укажите ваше точное и
 
 def load_config():
     global program_path, token, url_ping, url_quick_search, url_search, \
-        url_reservation, url_folio, session
+        url_reservation, url_folio, session, host, port
     
     with open(config_path, 'r', encoding='utf-8') as f:
         config = yaml.safe_load(f)

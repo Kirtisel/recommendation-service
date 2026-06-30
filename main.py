@@ -181,4 +181,4 @@ if __name__ == '__main__':
     
     print("Запуск веб-сервера Рекомендаций...")
     # Передаем сам объект app вместо строки "main:app"
-    uvicorn.run(app, dl.host, dl.port) 
+    uvicorn.run(app, host=dl.host, port=dl.port) 
