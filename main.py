@@ -83,7 +83,7 @@ def get_test_predictions(payload: GetTestRecommendations):
     df_cs = get_cos_sim_predictions(df_pr)
     
     # СЛУЧАЙНЫЙ ЛЕС
-    df_rf = prepare_rnd_forest_data(df_pr, csv_dir) # ЗДЕСЬ ЛИШНИЙ 2 ПАРАМЕТР !!!
+    df_rf = prepare_rnd_forest_data(df_pr) # ЗДЕСЬ ЛИШНИЙ 2 ПАРАМЕТР !!!
   
     df_fitness_to_predict = prepare_fitness_prediction_data(df_rf)
     # print(f"!!!!!!!!!!!!!!!!!!!!!{len(df_fitness_to_predict)}")
@@ -148,7 +148,7 @@ def get_predictions(payload: GetRecommendations):
     df_cs = get_cos_sim_predictions(df_pr)
     
     # СЛУЧАЙНЫЙ ЛЕС
-    df_rf = prepare_rnd_forest_data(df_pr, csv_dir) # ЗДЕСЬ ЛИШНИЙ 2 ПАРАМЕТР !!!
+    df_rf = prepare_rnd_forest_data(df_pr)
     df_fitness_to_predict = prepare_fitness_prediction_data(df_rf)
     df_fitness_to_predict = df_fitness_to_predict.drop(columns=['Fitness_order']) # удаляем целевую колонку
     # отправка данных в модель для получения предсказаний

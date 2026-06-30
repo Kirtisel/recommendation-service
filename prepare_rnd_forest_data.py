@@ -57,9 +57,8 @@ def get_rack_discount(rate):
     return 0 # для тарифов LONG, INI и др. скидку по умолчанию считаем 0
 
 
-def prepare_rnd_forest_data(dataframe, csv_path):
+def prepare_rnd_forest_data(dataframe):
     dataframe = dataframe.copy()  # Делает таблицу полностью независимой в памяти
-    csv_path = csv_path / "random_forest_data.csv"
     #Переводим столбцы в правильный формат даты Pandas
     date_cols = ['CreatedDate', 'ArrivalDate', 'DepartureDate']
     for col in date_cols:
