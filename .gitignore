@@ -1,0 +1,14 @@
+build/
+csv_files/
+dist/
+logus_files/
+models/
+predict_data/
+predictions/
+src/
+test/
+config.yaml
+main.spec
+requirements.txt
+__pycache__/
+.spyproject/
